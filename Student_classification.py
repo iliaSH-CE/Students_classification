@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score
 
 
 #Reading Data
-data=pd.read_csv("C:\\Users\\Center\\Downloads\\student+performance\\student\\student-mat.csv",delimiter=';')
+data=pd.read_csv("File's name",delimiter=';')
 
 
 #binerizing objective and categorial values with LableEncoder
@@ -39,7 +39,7 @@ y=data[['Target_G3']]
 
 #making train_test_split
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.3,random_state=40)
-
+#Using DecisionTreeClassifier as model
 tree=DecisionTreeClassifier(max_depth=5,random_state=40).fit(X_train,y_train)
 yhat=tree.predict(X_test)
 
